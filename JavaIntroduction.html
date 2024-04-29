@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Java By Kishore</title>
+   <style>
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 9%;
+  padding: 15px 0;
+}
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 2px solid #0d0303;
+
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+.container1{
+   margin:  30px;
+}
+body{
+   background: url("design.png")  fixed ;
+   background-image: blur(200px);
+
+}
+#features-image{
+   height: auto;
+   width: 40%;
+
+}
+   </style>
+</head>
+<body>
+   <header class="headerclass">
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid">
+           <div class="navbar-header">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>                        
+             </button>
+             <a class="navbar-brand" href="index.html">Java With Kishore</a>
+           </div>
+           <div class="collapse navbar-collapse" id="myNavbar">
+             <ul class="nav navbar-nav">
+               <li class="active"><a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+               <li><a href="JavaIntroduction.html">Java</a></li>
+               <li><a href="https://www.oracle.com/in/java/technologies/downloads/">JDK Download</a></li>
+             </ul>
+             <ul class="nav navbar-nav navbar-right">
+               <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+               <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+             </ul>
+           </div>
+         </div>
+       </nav>
+   </header>
+   <div class="bodydiv">
+      <section class="container1">
+         <div class="row">
+            <div class="left" style="background-color:#bbbbbb96;">
+              <h2>Menu</h2>
+              <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+              <ul id="myMenu">
+                <li><a href="JavaIntroduction.html">Java Introduction</a></li>
+                <li><a href="#">Java Syntax</a></li>
+                <li><a href="#">Java Variables</a></li>
+                <li><a href="#">Java Datatypes</a></li>
+                <li><a href="#">Java Keywords</a></li>
+                <li><a href="#">Java Operators</a></li>
+                <li><a href="#">Java Typecasting</a></li>
+                <li><a href="#">Java Control Statements</a></li>
+                <li><a href="#">Java If Else</a></li>
+                <li><a href="#">Java Switchcase</a></li>
+              </ul>
+            </div>
+            <div class="right" style="background-color:#dddddd89;">
+               <h2>What is java</h2>
+               <p> 
+                  Java is a programming language to communicate , and set of instructions to 
+                  given machine to do Some task. 
+                  </p>
+                  <p>
+                     <ol>
+                      <ul>Java is a object-oriented and secure programming language.</ul>
+                      <ul>Java was developed by Sun Microsystems (which is now the subsidiary of Oracle) in the year 1995</ul>
+                      <ul> James Gosling is known as the father of Java.</ul>
+                      <ul> Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)</ul>
+                      <ul>It is open-source and free</ul>
+                      <ul> Write once run anywhere (WORA) it was a java slogan</ul>
+                     </ol>
+                   </p>
+                  <h2>Java is used to develop </h2>
+               <p>
+                 <ol>
+                  <li>Stand alone applications (No need internet) </li>
+                  <li>Web applications (need internet) </li>
+                  <li> Enterprise applications </li>
+                  <li>Desktop applications </li>
+                 </ol>
+               </p>
+               <h2>Java features </h2>
+               <p>
+                 <ol>
+                  <li>Simple</li>
+                  <li>Object-oriented</li>
+                  <li> Platform independent </li>
+                  <li> Portable</li>
+                  <li>Secured</li>
+                  <li> Multithreading</li>
+                 </ol>
+               </p>
+               <div>
+                  <img src="image.png" id="features-image">
+               </div>
+             
+             </div>
+           </div>
+      </section>
+   </div>
+   
+   <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("mySearch");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myMenu");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+      </script>
+</body>
+</html>
