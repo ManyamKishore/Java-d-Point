@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Java By Kishore</title>
+   <style>
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+  box-shadow: 1px 4px 4px 3px black;
+ 
+}
+
+/* Left column (menu) */
+.left {
+  flex: 9%;
+  padding: 15px 0;
+}
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+  color: black;
+ 
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 2px solid #0d0303;
+
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+.container1{
+   margin:  30px;
+}
+body{
+   background: url("design.png")  fixed ;
+   background-image: blur(200px);
+
+}
+
+.what-java{
+  color: black;
+  
+
+}
+.para{
+  font-size: 20px;
+}
+
+.firstbox{
+   display: ruby;
+   
+}
+
+.syntaxdiv{
+   background-color: black;
+   color: white;
+   padding: 30px;
+}
+.para >*{
+   color: black;
+   font-family: monospace;
+}
+.btn{
+   color: black;
+   background-color: aqua;
+}
+.btn:hover{
+   background-color: white;
+}
+.container2{
+  
+   display: grid;
+   margin: 20px;
+}
+.note{
+   font-family: 'Times New Roman', Times, serif;
+   font-size: large;
+   color: aqua;
+}
+   </style>
+</head>
+<body>
+   <header class="headerclass">
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid">
+           <div class="navbar-header">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>                        
+             </button>
+             <a class="navbar-brand" href="index.html">Java With Kishore</a>
+           </div>
+           <div class="collapse navbar-collapse" id="myNavbar">
+             <ul class="nav navbar-nav">
+               <li class="active"><a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+               <li><a href="JavaIntroduction.html">Java</a></li>
+               <li><a href="https://www.oracle.com/in/java/technologies/downloads/">JDK Download</a></li>
+             </ul>
+             <ul class="nav navbar-nav navbar-right">
+               <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+               <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+             </ul>
+           </div>
+         </div>
+       </nav>
+   </header>
+   <div class="bodydiv">
+      <section class="container1">
+         <div class="row">
+            <div class="left" style="background-color:#bbbbbb68;">
+              <h2>Menu</h2>
+              <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+              <ul id="myMenu">
+                <li><a href="JavaIntroduction.html">Java Introduction</a></li>
+                <li><a href="JavaSyntax.html">Java Syntax</a></li>
+                <li><a href="#">Java Variables</a></li>
+                <li><a href="#">Java Datatypes</a></li>
+                <li><a href="#">Java Keywords</a></li>
+                <li><a href="#">Java Operators</a></li>
+                <li><a href="#">Java Typecasting</a></li>
+                <li><a href="#">Java Control Statements</a></li>
+                <li><a href="#">Java If Else</a></li>
+                <li><a href="#">Java Switchcase</a></li>
+              </ul>
+            </div>
+            <div class="right" style="background-color:#a7a4a4dc;">
+               <h2 class="what-java">Java Syntax</h2>
+                
+               <div class="firstbox">
+                  <div class="syntaxdiv">
+                     <div class="program">
+                        <h4 class="line1"> class Main {</h4>
+                           <ul class="line2">public static void main(String[] args) {</ul>
+                            <ul class="line3"> System.out.println("code with kishore");</ul>
+                          <h4 class="line4">     }</h4> 
+                        <h4 class="line 5">}</h4>
+                     </div>
+                     
+                     <h3><button type="button" class="btn"  onclick = location.href="#container-fluid">Execute</button></h3>
+                  </div>
+                  <div class="syntaxdiv1">
+                     <h2> Click here to Execute this proagram</h2>
+                     <h3><button type="button" class="btn1"  onclick = location.href="#container-fluid">Execute</button></h3>
+                     <h3>You can also modify the code by using below Java compiler</h3>
+                  </div>
+                  
+                  
+               </div>
+               
+                  <p class="para">
+                     
+                     <h2 class="what-java">Java Syntax Rules</h2>
+                     <ol class="para 1">
+                      <li>Every line of code that runs in Java must be inside a class</li>
+                      <li>we named the class name as Main</li>
+                      <li>A class Name should always start with an uppercase first letter.</li>
+                      <li>The name of the java file must match the class name
+                        <h4>For Example : 
+                           <b> Above class name is Main , file name is Main.java</b>
+                     </h4>
+                      </li>
+                      <li>every program must contain the main() method.</li>
+                      
+                        <b  class="note">public static void main(String[] args) { }</b>
+                     <li>Note: The curly braces {} marks the beginning and the end of a block of code.</li>
+                     <li>what ever you put inside the println(" ") it will print</li>
+                     <b class="note">System.out.println( ) ;</b>
+                      <li> <b>must end with a semicolon ( ; )</b></li>
+                  </ol>
+                   </p>
+               
+             </div>
+           </div>
+      </section>
+      <section class="container2">
+         <div data-pym-src="https://www.jdoodle.com/embed/v0/7z0o"  id="container-fluid"></div>
+      </section>
+   </div>
+   
+   <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("mySearch");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myMenu");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+        
+      </script>
+      <script src= 
+      "https://www.jdoodle.com/assets/jdoodle-pym.min.js"
+              type="text/javascript"> 
+          </script> 
+     
+</body>
+</html>
