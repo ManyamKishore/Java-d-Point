@@ -17,6 +17,7 @@
 /* Create a column layout with Flexbox */
 .row {
   display: flex;
+  box-shadow: 1px 4px 4px 3px black;
 }
 
 /* Left column (menu) */
@@ -32,6 +33,7 @@
 .right {
   flex: 65%;
   padding: 15px;
+  color: black;
 }
 
 /* Style the search box */
@@ -73,6 +75,26 @@ body{
    width: 40%;
 
 }
+.what-java{
+  color: black;
+  
+
+}
+.para{
+  font-size: 20px;
+}
+.final-div{
+  display: flex;
+  justify-content: end;
+}
+.nextbtn{
+  margin: 20px;
+  margin-top: -10px;
+  height: 50px ;
+  width: 100px;
+  background-color: white;
+ 
+}
    </style>
 </head>
 <body>
@@ -104,12 +126,12 @@ body{
    <div class="bodydiv">
       <section class="container1">
          <div class="row">
-            <div class="left" style="background-color:#bbbbbb96;">
+            <div class="left" style="background-color:#bbbbbb68;">
               <h2>Menu</h2>
               <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
               <ul id="myMenu">
                 <li><a href="JavaIntroduction.html">Java Introduction</a></li>
-                <li><a href="#">Java Syntax</a></li>
+                <li><a href="JavaSyntax.html">Java Syntax</a></li>
                 <li><a href="#">Java Variables</a></li>
                 <li><a href="#">Java Datatypes</a></li>
                 <li><a href="#">Java Keywords</a></li>
@@ -120,14 +142,14 @@ body{
                 <li><a href="#">Java Switchcase</a></li>
               </ul>
             </div>
-            <div class="right" style="background-color:#dddddd89;">
-               <h2>What is java</h2>
-               <p> 
+            <div class="right" style="background-color:#a7a4a4dc;">
+               <h2 class="what-java">What is java</h2>
+               <p class="para"> 
                   Java is a programming language to communicate , and set of instructions to 
                   given machine to do Some task. 
                   </p>
-                  <p>
-                     <ol>
+                  <p class="para">
+                     <ol class="para 1">
                       <ul>Java is a object-oriented and secure programming language.</ul>
                       <ul>Java was developed by Sun Microsystems (which is now the subsidiary of Oracle) in the year 1995</ul>
                       <ul> James Gosling is known as the father of Java.</ul>
@@ -138,7 +160,7 @@ body{
                    </p>
                   <h2>Java is used to develop </h2>
                <p>
-                 <ol>
+                 <ol class="para 2">
                   <li>Stand alone applications (No need internet) </li>
                   <li>Web applications (need internet) </li>
                   <li> Enterprise applications </li>
@@ -147,7 +169,7 @@ body{
                </p>
                <h2>Java features </h2>
                <p>
-                 <ol>
+                 <ol class="para 3">
                   <li>Simple</li>
                   <li>Object-oriented</li>
                   <li> Platform independent </li>
@@ -162,7 +184,11 @@ body{
              
              </div>
            </div>
+          
       </section>
+      <div class="final-div" >
+        <div><button type="button" class="nextbtn" onclick=location.href="JavaSyntax.html" >Next</button></div>
+       </div>
    </div>
    
    <script>
